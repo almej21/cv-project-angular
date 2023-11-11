@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { BehaviorSubject, Subscription } from 'rxjs';
+import { BehaviorSubject, Subscription, skip } from 'rxjs';
 
 const VALID_PATTERN = "^[a-zA-Z -']+";
 @Component({
@@ -30,10 +30,8 @@ export class ContactPageComponent implements OnInit, OnDestroy {
       lastName: ['', [Validators.required, Validators.pattern(VALID_PATTERN)]],
       email: ['', [Validators.required, Validators.email]],
     });
-  }
 
-  public clickButton() {
-    this.sub = this.data$.subscribe({
+    this.sub = this.data$.pipe(skip(1)).subscribe({
       next: (res) => {
         if (res) {
           this._snackBar.openFromTemplate(this.popUpSuccessTemplate, {
@@ -50,6 +48,9 @@ export class ContactPageComponent implements OnInit, OnDestroy {
         }
       },
     });
+  }
+
+  public clickButton() {
     this.data$.next(this.form.valid);
     this.form.valid && this.form.reset();
   }
