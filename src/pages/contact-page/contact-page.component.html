@@ -1,0 +1,41 @@
+<div class="contact-page">
+  <form [formGroup]="form" class="example-form">
+    <div class="contact-header">
+      <p>Contact Me</p>
+      <mat-icon> person_outline </mat-icon>
+    </div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input placeholder="Name" matInput formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Last Name</mat-label>
+      <input placeholder="Last Name" matInput formControlName="lastName" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input placeholder="Email" matInput formControlName="email" />
+    </mat-form-field>
+
+    <div class="example-button-row">
+      <button mat-button color="warn" type="submit" (click)="clickButton()">
+        Submit
+        <mat-icon> check_circle_outline </mat-icon>
+      </button>
+    </div>
+  </form>
+</div>
+
+<ng-template #popUpSuccess>
+  <div class="popup" matSnackBarLabel>
+    Submited<mat-icon> check_circle_outline </mat-icon>
+  </div>
+</ng-template>
+
+<ng-template #popUpError>
+  <div class="popup" matSnackBarLabel>
+    Not valid<mat-icon> cancel </mat-icon>
+  </div>
+</ng-template>

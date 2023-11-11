@@ -1,0 +1,52 @@
+.section-container {
+  border: 2px solid #000;
+  border-radius: 10px;
+  min-height: 22vh;
+  width: 48%;
+  margin-left: 10px;
+  margin-top: 20px;
+  -webkit-box-shadow: 0px 8px 37px -25px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 8px 37px -25px rgba(0, 0, 0, 1);
+  box-shadow: 0px 8px 37px -25px rgba(0, 0, 0, 1);
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
+  a {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .header-container {
+    border-bottom: 2px solid #000;
+    width: 100%;
+    h4 {
+      margin-left: 10px;
+      font-size: 24px;
+    }
+  }
+  p {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+mat-card {
+  margin-top: 25px;
+  margin-left: 15px;
+  width: 60%;
+  padding: 0px;
+  box-shadow: 0px 0px 10px 1px #014dff;
+}
+mat-card-header {
+  mat-card-title {
+    font-size: 24px;
+  }
+
+  padding: 16px;
+  box-shadow: 0px 0px 8px 2px #dadada;
+}
+
+mat-card-content,
+mat-card-actions {
+  padding: 16px;
+}

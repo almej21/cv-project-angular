@@ -1,0 +1,8 @@
+<div class="github-page"></div>
+<ng-container *ngFor="let github of githubData">
+  <app-section-view
+    [title]="github.label"
+    [link]="github.link"
+    [description]="github.description"
+  ></app-section-view>
+</ng-container>

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif !important ;
+}
+
+.popup-success {
+  :first-child {
+    background-color: rgb(43, 255, 0) !important;
+  }
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  max-width: 30% !important;
+  font-size: 20px;
+}
+
+.popup-error {
+  :first-child {
+    background-color: rgb(255, 0, 0) !important;
+  }
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  max-width: 30% !important;
+  font-size: 20px;
+}
+
+.mat-snack-bar-handset {
+  display: flex;
+  justify-content: center;
+}
